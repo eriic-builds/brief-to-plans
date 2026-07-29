@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# CRLF here would make bash fail with a literal "\r: command not found".
+*.sh text eol=lf
