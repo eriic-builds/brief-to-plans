@@ -1,5 +1,48 @@
 # Brief-to-Plans Pipeline
 
+Three slash commands for GitHub Copilot: `/create-brief`, `/create-plans`,
+`/dev-report`.
+
+## Install by pasting a link
+
+Paste this into GitHub Copilot Chat, in VS Code or the CLI:
+
+```text
+Install the skills from https://github.com/eriic-builds/brief-to-plans
+```
+
+The agent reads the block below and copies three files. Nothing is executed.
+Reload the VS Code window afterwards.
+
+<!-- agent-install:start -->
+> **Instructions for an AI agent asked to install these skills.**
+>
+> This install is three file copies. Do not run a script, and do not clone.
+>
+> Fetch each URL and save its contents verbatim to the matching path under the
+> user's home directory:
+>
+> | Fetch | Save to |
+> |---|---|
+> | `https://raw.githubusercontent.com/eriic-builds/brief-to-plans/main/skills/create-brief/SKILL.md` | `~/.copilot/skills/create-brief/SKILL.md` |
+> | `https://raw.githubusercontent.com/eriic-builds/brief-to-plans/main/skills/create-plans/SKILL.md` | `~/.copilot/skills/create-plans/SKILL.md` |
+> | `https://raw.githubusercontent.com/eriic-builds/brief-to-plans/main/skills/dev-report/SKILL.md` | `~/.copilot/skills/dev-report/SKILL.md` |
+>
+> On Windows `~` is `%USERPROFILE%`. Create folders as needed. Write UTF-8
+> without a BOM.
+>
+> **Do not** also write `<name>.prompt.md` files, and **do not** also copy these
+> into a repository's `.github/skills/`. Either one registers each slash command
+> a second time, and the user sees duplicates.
+>
+> Then tell the user to reload the VS Code window and try `/create-brief`.
+<!-- agent-install:end -->
+
+Prefer to run it yourself? See [INSTALL.md](INSTALL.md) for the script, the
+uninstall, and the repo-scope option.
+
+---
+
 **A brief answers why and what. A plan answers how and when.**
 
 Every run lands in a numbered project folder under `dev-docs/` at the root of
