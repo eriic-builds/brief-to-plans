@@ -78,7 +78,7 @@ not stop you.
 |---|---|
 | VS Code Copilot Chat **and** the Copilot CLI, all workspaces | `~/.copilot/skills/<name>/SKILL.md` |
 | VS Code Copilot Chat **and** the Copilot CLI, one repo (`-Scope repo`) | `<repo>/.github/skills/<name>/SKILL.md` |
-| Canonical source | `02--Brief-to-Plans-Pipeline/skills/<name>/SKILL.md` |
+| Canonical source | `skills/<name>/SKILL.md` |
 
 **One file per skill, per scope.** Both tools read the same skills folder, so a
 single `SKILL.md` serves both. The `.github/` paths are relative to a
@@ -105,7 +105,7 @@ right one for you.
 
 ## The canonical copy
 
-`02--Brief-to-Plans-Pipeline/skills/<name>/SKILL.md` is canonical. Every other
+`skills/<name>/SKILL.md` is canonical. Every other
 copy is generated from it, and the installer reads only from it.
 
 **Editing any one copy does not update the others.** There is no watcher and no
@@ -147,7 +147,7 @@ treats as wildcards, silently matching nothing:
 
 ```powershell
 foreach ($n in @('create-brief','create-plans','dev-report')) {
-  $a = (Get-FileHash -LiteralPath "02--Brief-to-Plans-Pipeline\skills\$n\SKILL.md").Hash
+  $a = (Get-FileHash -LiteralPath "skills\$n\SKILL.md").Hash
   $b = (Get-FileHash -LiteralPath (Join-Path $HOME ".copilot\skills\$n\SKILL.md")).Hash
   "{0}: {1}" -f $n, $(if ($a -eq $b) { 'match' } else { 'MISMATCH' })
 }

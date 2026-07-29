@@ -99,8 +99,8 @@ change detection beyond the date.
 Each skill exists in two places once installed:
 
 ```
-02--Brief-to-Plans-Pipeline/skills/<name>/SKILL.md   canonical
-~/.copilot/skills/<name>/SKILL.md                    installed, both tools
+skills/<name>/SKILL.md                canonical
+~/.copilot/skills/<name>/SKILL.md     installed, both tools
 ```
 
 `install.ps1` regenerates the installed copy from the canonical one, so they

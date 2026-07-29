@@ -1,4 +1,4 @@
-# Agent orientation  -  02--Brief-to-Plans-Pipeline
+# Agent orientation  -  brief-to-plans
 
 ## What this folder is
 
